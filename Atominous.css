@@ -89,7 +89,7 @@ h4{
     font-size: 20px;
 }
 .newsletter form{
-    width: 380px;
+    width: 280px;
     max-width: 100%;
     position: relative;
 }
@@ -109,5 +109,8 @@ h4{
     padding: 10px 30px;
     border-radius: 30px;
     background-color: #000000;
-    color: white
+    color: white;
+    box-shadow: 0px 0px 5px #000, 0px 0px 15px #858585;
+    top: 6px;
+    right: 6px;
 }   
