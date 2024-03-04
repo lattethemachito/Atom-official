@@ -30,3 +30,25 @@ nav {
     letter-spacing: 1px;
     cursor: pointer;
 }
+
+span {
+    color: #000000;
+}
+
+nav ul li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 10px  25px
+}
+
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+nav ul li a:hover{
+    color: #000000;
+    transition: 4s;
+}
