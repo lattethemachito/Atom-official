@@ -114,3 +114,15 @@ h4{
     top: 6px;
     right: 6px;
 }   
+.service {
+    background: #101010;
+    width: 100%;
+    padding: 100px 0px;
+} 
+.title h2{
+    color: white;
+    font-size: 75px;
+    width: 1130px;
+    margin: 30px auto;
+    text-align: center;
+}
