@@ -45,7 +45,7 @@ nav ul li a:hover{
     color: #2986cc;
     transition: 0.4s;
 }
-.btn{
+.button{
     background-color: #2986cc;
     color: white;
     text-decoration: none;
@@ -53,9 +53,10 @@ nav ul li a:hover{
     font-weight: bold;
     padding: 10px  25px;
     border-radius: 30px;
-    transition: transform .4s
+    transition: transform 0.4s;
+
 }
-.btn:hover{
+.button:hover{
    transform: scale(1.2);
 }
 .content{
@@ -67,44 +68,17 @@ nav ul li a:hover{
 h1{
     color: white;
     margin: 20px 0px 20px;
-    font-size: 75px;
+    font-size: 150px;
 }
 h3{ 
     color: white;
-    font-size: 25px;
+    font-size: 50px;
     margin-bottom: 50px;
 }
 h4{ 
     color: white;
     letter-spacing: 2px;
-    font-size: 20px;
-}
-.newsletter form{
-    width: 280px;
-    max-width: 100%;
-    position: relative;
-}
-.newsletter form input:first-child{
-    display: inline-block;
-    width: 47%;
-    padding: 14px 130px 14px 15px;
-    background-color: white;
-    border: 2px solid ;
-    outline: none;
-    border-radius: 30px;
-}
-.newsletter form input:last-child{
-    position:absolute;
-    display:inline-block;
-    outline: none;
-    border: none;
-    padding: 10px 30px;
-    border-radius: 30px;
-    background-color: #2986cc;
-    color: white;
-    box-shadow: 0px 0px 5px #000, 0px 0px 15px #858585;
-    top: 6px;
-    right: 6px;
+    font-size: 50px;
 }   
 .service {
     background: #000;
