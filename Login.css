@@ -32,6 +32,7 @@ body {
     background: linear-gradient(-45deg, #df4adf, #520825);
     z-index: 6;
     transform: translateX(100%);
+    transition: 1s ease-in-out;
 }
 
 .signin-signup {
@@ -170,6 +171,21 @@ border-color: #df4adf;
 .image{
     width: 100%;
 }
+
+.left-panel .image,
+.left-panel .content{
+    transform: translateX(-200%);
+}
+.right-panel .image,
+.right-panel .content{
+    transform: translateX(0%);
+}
+/*Animation*/
+
 .container.sign-up-mode::before{
     transform: translateX(0);
+}
+.container.sign-up-mode .right-panel .image,
+.container.sign-up-mode .right-panel .content{
+    transform: translateX(200%);
 }
