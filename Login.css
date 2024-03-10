@@ -126,3 +126,10 @@ form {
     border-radius: 50px;
     margin: 0 5px;
 }
+a{
+    text-decoration: none;
+}
+.social-icon:hover{
+color: #df4adf;
+border-color: #df4adf;
+}
