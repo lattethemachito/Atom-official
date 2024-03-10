@@ -197,6 +197,11 @@ border-color: #df4adf;
 .right-panel .content{
     transform: translateX(0%);
 }
+
+.account-text{
+    display: none;
+}
+
 /*Animation*/
 
 .container.sign-up-mode::before{
@@ -242,7 +247,23 @@ border-color: #df4adf;
     form.sign-up-form{
         display: none;
     }
+   .container.sign-up-mode2  form.sign-in-form{
+    display: flex;
+    opacity: 1;
+   }
+   .container.sign-up-mode2  form.sign-up-form{
+    display: none;
+   }
     .panels-container{
         display: none;
+    }
+    .account-text{
+        display: initial;
+        margin-top: 30px;
+    }
+}
+@media (max-width:320px){
+    form{
+        width: 90%;
     }
 }
