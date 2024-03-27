@@ -23,38 +23,23 @@ nav {
 }
 .logo {
     color: white;
-    font-size: 35px;
+    font-size: 50px;
     letter-spacing: 1px;
     cursor: pointer;
 }
 span {
     color: #2986cc;
 }
-nav ul li {
-    list-style-type: none;
-    display: inline-block;
-    padding: 10px  25px;
-}
-nav ul li a{
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    text-transform: capitalize;
-}
-nav ul li a:hover{
-    color: #2986cc;
-    transition: 0.4s;
-}
+
 .button{
     background-color: #2986cc;
     color: white;
     text-decoration: none;
     border: 2px solid transparent;
     font-weight: bold;
-    padding: 10px  25px;
+    padding: 20px  45px;
     border-radius: 30px;
     transition: transform 0.4s;
-
 }
 .button:hover{
    transform: scale(1.2);
@@ -67,7 +52,7 @@ nav ul li a:hover{
 }   
 h1{
     color: white;
-    margin: 20px 0px 20px;
+    margin: 10px 0px 10px;
     font-size: 150px;
 }
 h3{ 
