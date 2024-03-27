@@ -9,10 +9,10 @@ const progress = (value) => {
 
 const startBtn = document.querySelector(".start"),
   numQuestions = document.querySelector("#num-questions"),
-  category = document.querySelector("#Kategorie"),
-  difficulty = document.querySelector("#Schwierigkeitsgrad"),
-  timePerQuestion = document.querySelector("#Zeit"),
-  quiz = document.querySelector(".Quiz"),
+  category = document.querySelector("#category"),
+  difficulty = document.querySelector("#difficulty"),
+  timePerQuestion = document.querySelector("#time"),
+  quiz = document.querySelector(".quiz"),
   startScreen = document.querySelector(".start-screen");
 
 let questions = [],
@@ -43,9 +43,9 @@ const startQuiz = () => {
 startBtn.addEventListener("click", startQuiz);
 
 const showQuestion = (question) => {
-  const questionText = document.querySelector(".Frage"),
+  const questionText = document.querySelector(".question"),
     answersWrapper = document.querySelector(".answer-wrapper");
-  questionNumber = document.querySelector(".Nummer");
+  questionNumber = document.querySelector(".number");
 
   questionText.innerHTML = question.question;
 
@@ -57,8 +57,8 @@ const showQuestion = (question) => {
   answers.sort(() => Math.random() - 0.5);
   answers.forEach((answer) => {
     answersWrapper.innerHTML += `
-                  <div class="Antwort ">
-            <span class="text">${Antwort}</span>
+                  <div class="answer ">
+            <span class="text">${answer}</span>
             <span class="checkbox">
               <i class="fas fa-check"></i>
             </span>
@@ -69,16 +69,16 @@ const showQuestion = (question) => {
   questionNumber.innerHTML = ` Question <span class="current">${
     questions.indexOf(question) + 1
   }</span>
-            <span class="Total">/${questions.length}</span>`;
+            <span class="total">/${questions.length}</span>`;
   //add event listener to each answer
-  const answersDiv = document.querySelectorAll(".Antwort");
+  const answersDiv = document.querySelectorAll(".answer");
   answersDiv.forEach((answer) => {
-    answer.addEventListener("klick", () => {
+    answer.addEventListener("click", () => {
       if (!answer.classList.contains("checked")) {
         answersDiv.forEach((answer) => {
           answer.classList.remove("selected");
         });
-        answer.classList.add("einreichen");
+        answer.classList.add("selected");
         submitBtn.disabled = false;
       }
     });
@@ -146,41 +146,41 @@ nextBtn.addEventListener("click", () => {
 
 const checkAnswer = () => {
   clearInterval(timer);
-  const selectedAnswer = document.querySelector(".Antwort.selected");
+  const selectedAnswer = document.querySelector(".answer.selected");
   if (selectedAnswer) {
     const answer = selectedAnswer.querySelector(".text").innerHTML;
     console.log(currentQuestion);
     if (answer === questions[currentQuestion - 1].correct_answer) {
       score++;
-      selectedAnswer.classList.add("richtig");
+      selectedAnswer.classList.add("correct");
     } else {
-      selectedAnswer.classList.add("falsch");
+      selectedAnswer.classList.add("wrong");
       const correctAnswer = document
-        .querySelectorAll(".Antwort")
+        .querySelectorAll(".answer")
         .forEach((answer) => {
           if (
             answer.querySelector(".text").innerHTML ===
             questions[currentQuestion - 1].correct_answer
           ) {
-            answer.classList.add("Richtig");
+            answer.classList.add("correct");
           }
         });
     }
   } else {
     const correctAnswer = document
-      .querySelectorAll(".Antwort")
+      .querySelectorAll(".answer")
       .forEach((answer) => {
         if (
           answer.querySelector(".text").innerHTML ===
           questions[currentQuestion - 1].correct_answer
         ) {
-          answer.classList.add("Richtig");
+          answer.classList.add("correct");
         }
       });
   }
-  const answersDiv = document.querySelectorAll(".Antwort");
+  const answersDiv = document.querySelectorAll(".answer");
   answersDiv.forEach((answer) => {
-    answer.classList.add("korrigiert");
+    answer.classList.add("checked");
   });
 
   submitBtn.style.display = "none";
@@ -198,7 +198,7 @@ const nextQuestion = () => {
 
 const endScreen = document.querySelector(".end-screen"),
   finalScore = document.querySelector(".final-score"),
-  totalScore = document.querySelector(".erreichte Punktzahl");
+  totalScore = document.querySelector(".total-score");
 const showScore = () => {
   endScreen.classList.remove("hide");
   quiz.classList.add("hide");
@@ -206,8 +206,8 @@ const showScore = () => {
   totalScore.innerHTML = `/ ${questions.length}`;
 };
 
-const restartBtn = document.querySelector(".Starte erneut");
-restartBtn.addEventListener("Klick", () => {
+const restartBtn = document.querySelector(".restart");
+restartBtn.addEventListener("click", () => {
   window.location.reload();
 });
 
