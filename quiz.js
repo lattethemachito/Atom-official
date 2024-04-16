@@ -1,7 +1,7 @@
 const progressBar = document.querySelector(".progress-bar"),
   progressText = document.querySelector(".progress-text");
 
-const progress = (value) => {
+const progress = (value, time) => {
   const percentage = (value / time) * 100;
   progressBar.style.width = `${percentage}%`;
   progressText.innerHTML = `${value}`;
@@ -22,12 +22,12 @@ let questions = [],
 
 const startQuiz = () => {
   const num = numQuestions.value,
-    cat = category.value,
-    loadingAnimation();
-  fetch(fragen.json)
+    cat = category.value;
+  loadingAnimation();
+  fetch("fragen.json")
     .then((res) => res.json())
     .then((data) => {
-      questions = data.results;
+      questions = data.Kategorien[cat];
       setTimeout(() => {
         startScreen.classList.add("hide");
         quiz.classList.remove("hide");
@@ -41,8 +41,8 @@ startBtn.addEventListener("click", startQuiz);
 
 const showQuestion = (question) => {
   const questionText = document.querySelector(".question"),
-    answersWrapper = document.querySelector(".answer-wrapper");
-  questionNumber = document.querySelector(".number");
+    answersWrapper = document.querySelector(".answer-wrapper"),
+    questionNumber = document.querySelector(".number"); // Fragezeichen hinzugefügt
 
   questionText.innerHTML = question.question;
 
@@ -54,13 +54,12 @@ const showQuestion = (question) => {
   answers.sort(() => Math.random() - 0.5);
   answers.forEach((answer) => {
     answersWrapper.innerHTML += `
-                  <div class="answer ">
-            <span class="text">${answer}</span>
-            <span class="checkbox">
-              <i class="fas fa-check"></i>
-            </span>
-          </div>
-        `;
+      <div class="answer">
+        <span class="text">${answer}</span>
+        <span class="checkbox">
+          <i class="fas fa-check"></i>
+        </span>
+      </div>`;
   });
 
   questionNumber.innerHTML = ` Question <span class="current">${
@@ -91,7 +90,7 @@ const startTimer = (time) => {
       playAdudio("countdown.mp3");
     }
     if (time >= 0) {
-      progress(time);
+      progress(time, timePerQuestion.value); // Zeit als Argument übergeben
       time--;
     } else {
       checkAnswer();
@@ -207,8 +206,3 @@ const restartBtn = document.querySelector(".restart");
 restartBtn.addEventListener("click", () => {
   window.location.reload();
 });
-
-const playAdudio = (src) => {
-  const audio = new Audio(src);
-  audio.play();
-};
