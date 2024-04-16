@@ -10,7 +10,6 @@ const progress = (value) => {
 const startBtn = document.querySelector(".start"),
   numQuestions = document.querySelector("#num-questions"),
   category = document.querySelector("#category"),
-  difficulty = document.querySelector("#difficulty"),
   timePerQuestion = document.querySelector("#time"),
   quiz = document.querySelector(".quiz"),
   startScreen = document.querySelector(".start-screen");
@@ -24,10 +23,8 @@ let questions = [],
 const startQuiz = () => {
   const num = numQuestions.value,
     cat = category.value,
-    diff = difficulty.value;
-  loadingAnimation();
-  const url = `https://opentdb.com/api.php?amount=${num}&category=${cat}&difficulty=${diff}&type=multiple`;
-  fetch(url)
+    loadingAnimation();
+  fetch(fragen.json)
     .then((res) => res.json())
     .then((data) => {
       questions = data.results;
