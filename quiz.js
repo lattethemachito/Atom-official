@@ -17,8 +17,6 @@ const startBtn = document.querySelector(".start"),
 let questions = [],
   time = 30,
   score = 0,
-  currentQuestion = 1;
-        console.log(currentQuestion)
   currentQuestion = 1,
   timer;
 
@@ -44,7 +42,7 @@ startBtn.addEventListener("click", startQuiz);
 const startTimer = (time) => {
   timer = setInterval(() => {
     if (time === 3) {
-      playAdudio("countdown.mp3");
+      playAudio("countdown.mp3");
     }
     if (time >= 0) {
       progress(time, timePerQuestion.value);
@@ -117,21 +115,21 @@ const checkAnswer = () => {
     if (answer === questions[currentQuestion - 1].correct_answer) {
       score++;
       selectedAnswer.classList.add("correct");
-      playAdudio("correct.mp3");
+      playAudio("correct.mp3");
     } else {
       selectedAnswer.classList.add("wrong");
       const correctAnswer = document.querySelector(
         `.answer .text:contains(${questions[currentQuestion - 1].correct_answer})`
       );
       correctAnswer.parentElement.classList.add("correct");
-      playAdudio("wrong.mp3");
+      playAudio("wrong.mp3");
     }
   } else {
     const correctAnswer = document.querySelector(
       `.answer .text:contains(${questions[currentQuestion - 1].correct_answer})`
     );
     correctAnswer.parentElement.classList.add("correct");
-    playAdudio("correct.mp3");
+    playAudio("correct.mp3");
   }
   const answersDiv = document.querySelectorAll(".answer");
   answersDiv.forEach((answer) => {
@@ -164,7 +162,7 @@ const resultScreen = () => {
   progressText.innerHTML = `Score: ${score}`;
 };
 
-const playAdudio = (file) => {
+const playAudio = (file) => {
   const audio = new Audio(`./assets/${file}`);
   audio.play();
 };
