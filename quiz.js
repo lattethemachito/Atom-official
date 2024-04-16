@@ -17,7 +17,9 @@ const startBtn = document.querySelector(".start"),
 let questions = [],
   time = 30,
   score = 0,
-  currentQuestion,
+  currentQuestion = 1;
+        console.log(currentQuestion)
+  currentQuestion = 1,
   timer;
 
 const startQuiz = () => {
@@ -31,19 +33,33 @@ const startQuiz = () => {
       setTimeout(() => {
         startScreen.classList.add("hide");
         quiz.classList.remove("hide");
-        currentQuestion = 1;
-        console.log(currentQuestion)
         showQuestion(questions[0]);
+        startTimer(timePerQuestion.value);
       }, 1000);
     });
 };
 
 startBtn.addEventListener("click", startQuiz);
 
+const startTimer = (time) => {
+  timer = setInterval(() => {
+    if (time === 3) {
+      playAdudio("countdown.mp3");
+    }
+    if (time >= 0) {
+      progress(time, timePerQuestion.value);
+      time--;
+    } else {
+      checkAnswer();
+      clearInterval(timer);
+    }
+  }, 1000);
+};
+
 const showQuestion = (question) => {
   const questionText = document.querySelector(".question"),
     answersWrapper = document.querySelector(".answer-wrapper"),
-    questionNumber = document.querySelector(".number"); // Fragezeichen hinzugefügt
+    questionNumber = document.querySelector(".number");
 
   questionText.innerHTML = question.question;
 
@@ -63,10 +79,9 @@ const showQuestion = (question) => {
       </div>`;
   });
 
-  questionNumber.innerHTML = ` Question <span class="current">${
-    questions.indexOf(question) + 1
-  }</span>
+  questionNumber.innerHTML = ` Question <span class="current">${currentQuestion}</span>
             <span class="total">/${questions.length}</span>`;
+
   //add event listener to each answer
   const answersDiv = document.querySelectorAll(".answer");
   answersDiv.forEach((answer) => {
@@ -80,37 +95,7 @@ const showQuestion = (question) => {
       }
     });
   });
-
-  time = timePerQuestion.value;
-  startTimer(time);
 };
-
-const startTimer = (time) => {
-  timer = setInterval(() => {
-    if (time === 3) {
-      playAdudio("countdown.mp3");
-    }
-    if (time >= 0) {
-      progress(time, timePerQuestion.value); // Zeit als Argument übergeben
-      time--;
-    } else {
-      checkAnswer();
-    }
-  }, 1000);
-};
-
-const loadingAnimation = () => {
-  startBtn.innerHTML = "Loading";
-  const loadingInterval = setInterval(() => {
-    if (startBtn.innerHTML.length === 10) {
-      startBtn.innerHTML = "Loading";
-    } else {
-      startBtn.innerHTML += ".";
-    }
-  }, 500);
-};
-
-defineProperty();
 
 const submitBtn = document.querySelector(".submit"),
   nextBtn = document.querySelector(".next");
@@ -129,34 +114,24 @@ const checkAnswer = () => {
   const selectedAnswer = document.querySelector(".answer.selected");
   if (selectedAnswer) {
     const answer = selectedAnswer.querySelector(".text").innerHTML;
-    console.log(currentQuestion);
     if (answer === questions[currentQuestion - 1].correct_answer) {
       score++;
       selectedAnswer.classList.add("correct");
+      playAdudio("correct.mp3");
     } else {
       selectedAnswer.classList.add("wrong");
-      const correctAnswer = document
-        .querySelectorAll(".answer")
-        .forEach((answer) => {
-          if (
-            answer.querySelector(".text").innerHTML ===
-            questions[currentQuestion - 1].correct_answer
-          ) {
-            answer.classList.add("correct");
-          }
-        });
+      const correctAnswer = document.querySelector(
+        `.answer .text:contains(${questions[currentQuestion - 1].correct_answer})`
+      );
+      correctAnswer.parentElement.classList.add("correct");
+      playAdudio("wrong.mp3");
     }
   } else {
-    const correctAnswer = document
-      .querySelectorAll(".answer")
-      .forEach((answer) => {
-        if (
-          answer.querySelector(".text").innerHTML ===
-          questions[currentQuestion - 1].correct_answer
-        ) {
-          answer.classList.add("correct");
-        }
-      });
+    const correctAnswer = document.querySelector(
+      `.answer .text:contains(${questions[currentQuestion - 1].correct_answer})`
+    );
+    correctAnswer.parentElement.classList.add("correct");
+    playAdudio("correct.mp3");
   }
   const answersDiv = document.querySelectorAll(".answer");
   answersDiv.forEach((answer) => {
@@ -171,22 +146,36 @@ const nextQuestion = () => {
   if (currentQuestion < questions.length) {
     currentQuestion++;
     showQuestion(questions[currentQuestion - 1]);
+    startTimer(timePerQuestion.value);
   } else {
-    showScore();
+    quiz.classList.add("hide");
+    setTimeout(() => {
+      resultScreen();
+    }, 1000);
   }
 };
 
-const endScreen = document.querySelector(".end-screen"),
-  finalScore = document.querySelector(".final-score"),
-  totalScore = document.querySelector(".total-score");
-const showScore = () => {
-  endScreen.classList.remove("hide");
-  quiz.classList.add("hide");
-  finalScore.innerHTML = score;
-  totalScore.innerHTML = `/ ${questions.length}`;
+const resultScreen = () => {
+  const scoreText = document.querySelector(".score"),
+    result = document.querySelector(".result");
+  scoreText.innerHTML = `Score: ${score}`;
+  result.classList.remove("hide");
+  progressBar.style.width = "100%";
+  progressText.innerHTML = `Score: ${score}`;
 };
 
-const restartBtn = document.querySelector(".restart");
-restartBtn.addEventListener("click", () => {
-  window.location.reload();
-});
+const playAdudio = (file) => {
+  const audio = new Audio(`./assets/${file}`);
+  audio.play();
+};
+
+const loadingAnimation = () => {
+  startBtn.innerHTML = "Loading";
+  const loadingInterval = setInterval(() => {
+    if (startBtn.innerHTML.length === 10) {
+      startBtn.innerHTML = "Loading";
+    } else {
+      startBtn.innerHTML += ".";
+    }
+  }, 500);
+};
