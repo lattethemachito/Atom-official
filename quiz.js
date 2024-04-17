@@ -18,7 +18,7 @@ const startBtn = document.querySelector(".start"),
   nextBtn = document.querySelector(".next");
 
 let questions = [],
-  time = 30,
+  time = 0,
   score = 0,
   currentQuestion = 1,
   timer;
@@ -54,8 +54,9 @@ const startProcess = async () => {
 };
 
 const startQuiz = () => {
-  const num = numQuestions.value,
-    cat = category.value;
+  const num = parseInt(numQuestions.value);
+  const cat = category.value;
+  time = parseInt(timePerQuestion.value) * num; // Anpassung der Timerdauer
   loadingAnimation();
   fetch("fragen.json")
     .then((res) => res.json())
@@ -65,20 +66,20 @@ const startQuiz = () => {
         startScreen.classList.add("hide");
         quiz.classList.remove("hide");
         showQuestion(questions[0]);
-        startTimer(timePerQuestion.value);
+        startTimer();
       }, 1000);
     });
 };
 
 startBtn.addEventListener("click", startQuiz);
 
-const startTimer = (time) => {
+const startTimer = () => {
   timer = setInterval(() => {
     if (time === 3) {
       playAudio("countdown.mp3");
     }
     if (time >= 0) {
-      progress(time, timePerQuestion.value);
+      progress(time, timePerQuestion.value * parseInt(numQuestions.value)); // Anpassung der Progress-Funktion
       time--;
     } else {
       checkAnswer();
@@ -174,7 +175,7 @@ const nextQuestion = () => {
   if (currentQuestion < questions.length) {
     currentQuestion++;
     showQuestion(questions[currentQuestion - 1]);
-    startTimer(timePerQuestion.value);
+    startTimer();
   } else {
     quiz.classList.add("hide");
     setTimeout(() => {
@@ -185,11 +186,12 @@ const nextQuestion = () => {
 
 const resultScreen = () => {
   const scoreText = document.querySelector(".final-score");
+  const totalQuestions = parseInt(numQuestions.value);
+  scoreText.innerHTML = `${score}/${totalQuestions}`; // Anzeige der erreichten Punktzahl und der maximalen Punktzahl
   const resultScreen = document.querySelector(".end-screen");
-  scoreText.innerHTML = `${score}/10`; // 
   resultScreen.classList.remove("hide");
   progressBar.style.width = "100%";
-  progressText.innerHTML = `Score: ${score}`;
+  progressText.innerHTML = `Score: ${score}/${totalQuestions}`; // Anzeige der erreichten Punktzahl und der maximalen Punktzahl
 };
 
 const playAudio = (file) => {
