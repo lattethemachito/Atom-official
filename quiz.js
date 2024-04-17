@@ -12,13 +12,46 @@ const startBtn = document.querySelector(".start"),
   category = document.querySelector("#category"),
   timePerQuestion = document.querySelector("#time"),
   quiz = document.querySelector(".quiz"),
-  startScreen = document.querySelector(".start-screen");
+  startScreen = document.querySelector(".start-screen"),
+  answerWrapper = document.querySelector(".answer-wrapper"),
+  submitBtn = document.querySelector(".submit"),
+  nextBtn = document.querySelector(".next");
 
 let questions = [],
   time = 30,
   score = 0,
   currentQuestion = 1,
   timer;
+
+const getQuestionsData = async () => {
+  try {
+    const response = await fetch("fragen.json");
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error("Fehler beim Abrufen der JSON-Daten:", error);
+  }
+};
+
+const addAnswersToWrapper = (answers) => {
+  answers.forEach((answer) => {
+    const answerDiv = document.createElement("div");
+    answerDiv.classList.add("answer");
+
+    const answerText = document.createElement("span");
+    answerText.classList.add("text");
+    answerText.textContent = answer;
+    answerDiv.appendChild(answerText);
+
+    answerWrapper.appendChild(answerDiv);
+  });
+};
+
+const startProcess = async () => {
+  const data = await getQuestionsData();
+  const firstQuestionAnswers = data.Kategorien.Alles[0].incorrect_answers.concat(data.Kategorien.Alles[0].correct_answer);
+  addAnswersToWrapper(firstQuestionAnswers);
+};
 
 const startQuiz = () => {
   const num = numQuestions.value,
@@ -80,7 +113,6 @@ const showQuestion = (question) => {
   questionNumber.innerHTML = ` Question <span class="current">${currentQuestion}</span>
             <span class="total">/${questions.length}</span>`;
 
-  //add event listener to each answer
   const answersDiv = document.querySelectorAll(".answer");
   answersDiv.forEach((answer) => {
     answer.addEventListener("click", () => {
@@ -95,8 +127,6 @@ const showQuestion = (question) => {
   });
 };
 
-const submitBtn = document.querySelector(".submit"),
-  nextBtn = document.querySelector(".next");
 submitBtn.addEventListener("click", () => {
   checkAnswer();
 });

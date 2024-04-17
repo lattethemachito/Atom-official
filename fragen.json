@@ -1,92 +1,55 @@
 {
-    "Kategorien": {
-      "Alles": [
-        {
-          "question": "What is the capital of France?",
-          "correct_answer": "Paris",
-          "incorrect_answers": [
-            "London",
-            "Berlin",
-            "Rome"
-          ]
-        },
-        {
-          "question": "Who wrote 'Romeo and Juliet'?",
-          "correct_answer": "William Shakespeare",
-          "incorrect_answers": [
-            "Jane Austen",
-            "Charles Dickens",
-            "Mark Twain"
-          ]
-        },
-        {
-          "question": "miau?",
-          "correct_answer": "ja",
-          "incorrect_answers": [
-            "nein",
-            "ne",
-            "nop"
-          ]
-        }
-      ],
-      "Atom": [
-        {
-          "question": "What is the smallest particle of an element?",
-          "correct_answer": "Atom",
-          "incorrect_answers": [
-            "Molecule",
-            "Cell",
-            "Proton"
-          ]
-        },
-        {
-          "question": "Who proposed the atomic theory?",
-          "correct_answer": "John Dalton",
-          "incorrect_answers": [
-            "Albert Einstein",
-            "Marie Curie",
-            "Isaac Newton"
-          ]
-        },
-        {
-          "question": "miau?",
-          "correct_answer": "msiu",
-          "incorrect_answers": [
-            "no",
-            "noo",
-            "ye"
-          ]
-        }
-      ],
-      "Periodensystem": [
-        {
-          "question": "How many elements are there in the periodic table?",
-          "correct_answer": "118",
-          "incorrect_answers": [
-            "92",
-            "104",
-            "140"
-          ]
-        },
-        {
-          "question": "What is the lightest element?",
-          "correct_answer": "Hydrogen",
-          "incorrect_answers": [
-            "Oxygen",
-            "Carbon",
-            "Helium"
-          ]
-        },
-        {
-          "question": "neee?",
-          "correct_answer": "ms",
-          "incorrect_answers": [
-            "n",
-            "oo",
-            "y"
-          ]
-        }
-      ]
-    }
+  "Kategorien": {
+    "Alles": [
+      {
+        "question": "What is the capital of France?",
+        "correct_answer": "Paris",
+        "incorrect_answers": ["London", "Berlin", "Rome"]
+      },
+      {
+        "question": "Who wrote 'Romeo and Juliet'?",
+        "correct_answer": "William Shakespeare",
+        "incorrect_answers": ["Jane Austen", "Charles Dickens", "Mark Twain"]
+      },
+      {
+        "question": "miau?",
+        "correct_answer": "ja",
+        "incorrect_answers": ["nein", "ne", "nop"]
+      }
+    ],
+    "Atom": [
+      {
+        "question": "What is the smallest particle of an element?",
+        "correct_answer": "Atom",
+        "incorrect_answers": ["Molecule", "Cell", "Proton"]
+      },
+      {
+        "question": "Who proposed the atomic theory?",
+        "correct_answer": "John Dalton",
+        "incorrect_answers": ["Albert Einstein", "Marie Curie", "Isaac Newton"]
+      },
+      {
+        "question": "miau?",
+        "correct_answer": "msiu",
+        "incorrect_answers": ["no", "noo", "ye"]
+      }
+    ],
+    "Periodensystem": [
+      {
+        "question": "How many elements are there in the periodic table?",
+        "correct_answer": "118",
+        "incorrect_answers": ["92", "104", "140"]
+      },
+      {
+        "question": "What is the lightest element?",
+        "correct_answer": "Hydrogen",
+        "incorrect_answers": ["Oxygen", "Carbon", "Helium"]
+      },
+      {
+        "question": "neee?",
+        "correct_answer": "ms",
+        "incorrect_answers": ["n", "oo", "y"]
+      }
+    ]
   }
-  
+}
