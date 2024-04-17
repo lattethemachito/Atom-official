@@ -18,6 +18,21 @@ body
    bottom: 0;
    z-index: -1;
 }
+@media (min-aspect-ratio: 16/9) {
+    .back-video{
+        width: auto;
+        height: 100%;
+    }
+}
+@media (min-aspect-ratio: 16/9) {
+    .back-video{
+        width: auto;
+        height: 100%;
+    }
+}
+
+
+
 nav {
     display: flex;
     align-items: center;
