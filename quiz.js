@@ -184,10 +184,10 @@ const nextQuestion = () => {
 };
 
 const resultScreen = () => {
-  const scoreText = document.querySelector(".score"),
-    result = document.querySelector(".result");
-  scoreText.innerHTML = `Score: ${score}`;
-  result.classList.remove("hide");
+  const scoreText = document.querySelector(".final-score");
+  const resultScreen = document.querySelector(".end-screen");
+  scoreText.innerHTML = `${score}/10`; // 
+  resultScreen.classList.remove("hide");
   progressBar.style.width = "100%";
   progressText.innerHTML = `Score: ${score}`;
 };
