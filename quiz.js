@@ -192,7 +192,6 @@ const resultScreen = () => {
   progressBar.style.width = "100%";
   progressText.innerHTML = `Score: ${score}`;
 };
-
 const playAudio = (file) => {
   const audio = new Audio(`./assets/${file}`);
   audio.play();

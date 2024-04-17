@@ -19,19 +19,24 @@
     ],
     "Atom": [
       {
-        "question": "What is the smallest particle of an element?",
-        "correct_answer": "Atom",
-        "incorrect_answers": ["Molecule", "Cell", "Proton"]
+        "question": "Für was steht die Kernladung eines Atoms?",
+        "correct_answer": "Die Anzahl der Protonen im Kern",
+        "incorrect_answers": ["Die Anzahl der Elektronen im Kern", "Die Anzahl der Neutronen im Kern", "Die Anzahl der Nukleonen im Kern"]
       },
       {
-        "question": "Who proposed the atomic theory?",
-        "correct_answer": "John Dalton",
-        "incorrect_answers": ["Albert Einstein", "Marie Curie", "Isaac Newton"]
+        "question": "Was gibt die Molare Masse in der Kachel an?",
+        "correct_answer": "Das Gewicht eines einzelnen Atoms des jeweiligen Elements",
+        "incorrect_answers": ["Das Gewicht eines Elektrons", "Die Geschwindigkeit der Elektronen um den Kern", "Die Anordnung der Elektronen im Atom"]
       },
       {
-        "question": "miau?",
-        "correct_answer": "msiu",
-        "incorrect_answers": ["no", "noo", "ye"]
+        "question": "",
+        "correct_answer": "",
+        "incorrect_answers": ["", "", ""]
+      },
+      {
+        "question": "Was stellte John Dalton in Bezug auf Atome fest?",
+        "correct_answer": "Alle Atome eines Elements haben das gleiche Volumen und die gleiche Masse.",
+        "incorrect_answers": ["Atome bestehen aus positiven und negativen Teilchen.", "Atome können durch chemische Reaktionen vernichtet werden.", "Atome haben verschiedene Größen und Massen."]
       }
     ],
     "Periodensystem": [
