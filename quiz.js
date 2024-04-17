@@ -56,7 +56,7 @@ const startProcess = async () => {
 const startQuiz = () => {
   const num = parseInt(numQuestions.value);
   const cat = category.value;
-  time = parseInt(timePerQuestion.value) * num; // Anpassung der Timerdauer
+  time = parseInt(timePerQuestion.value) * num;
   loadingAnimation();
   fetch("fragen.json")
     .then((res) => res.json())
@@ -79,7 +79,7 @@ const startTimer = () => {
       playAudio("countdown.mp3");
     }
     if (time >= 0) {
-      progress(time, timePerQuestion.value * parseInt(numQuestions.value)); // Anpassung der Progress-Funktion
+      progress(time, timePerQuestion.value * parseInt(numQuestions.value));
       time--;
     } else {
       checkAnswer();
@@ -186,12 +186,11 @@ const nextQuestion = () => {
 
 const resultScreen = () => {
   const scoreText = document.querySelector(".final-score");
-  const totalQuestions = parseInt(numQuestions.value);
-  scoreText.innerHTML = `${score}/${totalQuestions}`; // Anzeige der erreichten Punktzahl und der maximalen Punktzahl
+  scoreText.innerHTML = `${score}`;
   const resultScreen = document.querySelector(".end-screen");
   resultScreen.classList.remove("hide");
   progressBar.style.width = "100%";
-  progressText.innerHTML = `Score: ${score}/${totalQuestions}`; // Anzeige der erreichten Punktzahl und der maximalen Punktzahl
+  progressText.innerHTML = `Score: ${score}`;
 };
 
 const playAudio = (file) => {
