@@ -106,7 +106,7 @@ form.sign-up-form{
     height: 50px;
     border: none;
     border-radius: 50px;
-    background: #a430a6;
+    background: #c749db;
     color: #fff;
     font-weight: 600;
     margin: 10px 0;
@@ -115,7 +115,7 @@ form.sign-up-form{
 }
 
 .btn:hover {
-    background: #6c156d;
+    background: #a430a6;
 }
 .social-text {
     margin: 10px 0;

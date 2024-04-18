@@ -49,7 +49,9 @@ nav {
     padding: 20px  30px;
     border-radius: 30px;
     transition: transform 0.4s;
-    
+    position:absolute;
+    right: 25px;
+    top: 30px;
 }
 .button:hover{
    transform: scale(1.2);
@@ -76,13 +78,13 @@ h4{
     font-size: 50px;
 }   
 .service {
-    background: linear-gradient(to bottom right, #2f123a, #2f123a, #2f123a);
+    background: linear-gradient(to bottom right, #611c7a, #511d64, #2f123a);
     width: 100%;
     padding: 100px 0px;
 } 
 
 .title h2 {
-    color: white;
+    color: rgb(255, 255, 255);
     font-size: 75px;
     width: 1130px;
     margin: 30px auto;
