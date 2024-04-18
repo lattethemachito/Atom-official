@@ -2,7 +2,7 @@ body
 {
     padding: 0;
     margin: 0;
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Anonymous pro', monospace;
     box-sizing: border-box;
 }
 .hero {
@@ -30,9 +30,6 @@ body
         height: 100%;
     }
 }
-
-
-
 nav {
     display: flex;
     align-items: center;
@@ -41,25 +38,18 @@ nav {
     padding-left: 8%;
     padding-right: 8%;
 }
-.logo {
-    color: white;
-    font-size: 50px;
-    letter-spacing: 1px;
-    cursor: pointer;
-}
-span {
-    color: #2986cc;
-}
 
 .button{
-    background-color: #2986cc;
-    color: white;
+    background-color: #ffffff;
+    color: #000000;
+    font-size: 18px;
     text-decoration: none;
-    border: 2px solid transparent;
+    border: 1px solid transparent;
     font-weight: bold;
-    padding: 20px  45px;
+    padding: 20px  30px;
     border-radius: 30px;
     transition: transform 0.4s;
+    
 }
 .button:hover{
    transform: scale(1.2);

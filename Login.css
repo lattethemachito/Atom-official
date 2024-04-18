@@ -10,14 +10,13 @@ body {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background: #208de0;
+    background: linear-gradient(to bottom right, #c749db, #780f78, #530a64);
 }
-
 .container {
     position: relative;
     width: 70vw;
     height: 80vh;
-    background: #ffffff;
+    background: #ffff;
     border-radius: 15px;
     box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
     overflow: hidden;
@@ -29,7 +28,7 @@ body {
     left: -50%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(-45deg, #1197e0, #5b9dbc);
+    background: linear-gradient(-45deg, #780f78, #a430a6);
     z-index: 6;
     transform: translateX(100%);
     transition: 1s ease-in-out;
@@ -69,16 +68,16 @@ form.sign-up-form{
 
 .title {
     font-size: 35px;
-    color: #4da8da;
+    color:#a430a6;
     margin-bottom: 10px;
 }
 
 .input-field {
     width: 100%;
     height: 50px;
-    background: #f0f0f0;
+    background: #ffff;
     margin: 10px 0;
-    border: 2px solid #4da8da;
+    border: 2px solid #a430a6;
     border-radius: 50px;
     display: flex;
     align-items: center;
@@ -99,7 +98,7 @@ form.sign-up-form{
     width: 100%;
     font-size: 18px;
     font-weight: 600;
-    color: #444;
+    color:#a430a6;
 }
 
 .btn {
@@ -107,7 +106,7 @@ form.sign-up-form{
     height: 50px;
     border: none;
     border-radius: 50px;
-    background: #4da8da;
+    background: #a430a6;
     color: #fff;
     font-weight: 600;
     margin: 10px 0;
@@ -116,7 +115,7 @@ form.sign-up-form{
 }
 
 .btn:hover {
-    background: #56a6cc;
+    background: #6c156d;
 }
 .social-text {
     margin: 10px 0;
