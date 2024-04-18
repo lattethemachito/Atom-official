@@ -21,7 +21,7 @@ body
     padding-right: 8%;
 }
 .service {
-    background: linear-gradient(to bottom right, #611c7a, #511d64, #2f123a);
+    background: linear-gradient(to bottom right, #2d0b8a, #185bb9, #2d0b8a);
     width: 100%;
     padding: 100px 0px;
 } 
@@ -44,7 +44,7 @@ body
     height: 365px;
     width: 335px;
     padding: 20px 35px;
-    background: #742176;
+    background: linear-gradient(to bottom right, #811681, #9922ab, #811681);
     border-radius: 20px;
     margin: 15px;
     position: relative;
