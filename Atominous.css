@@ -47,13 +47,25 @@ nav {
     text-decoration: none;
     border: 1px solid transparent;
     font-weight: bold;
-    padding: 20px  30px;
-    border-radius: 30px;
+    padding: 20px  20px;
+    border-radius: 35px;
+}
+
+.button1{
     transition: transform 0.4s;
     position:absolute;
-    right: 25px;
+    right: 70px;
     top: 30px;
 }
+
+.button2{
+    transition: transform 0.4s;
+    position: absolute;
+    bottom:104px;
+    left: 150px;
+
+}
+
 .button:hover{
    transform: scale(1.2);
 }
