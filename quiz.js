@@ -24,16 +24,16 @@ let questions = [],
     const num = parseInt(numQuestions.value);
     const cat = category.value;
     loadingAnimation();
-    fetch("fragen.json") // Passe den Dateinamen entsprechend deiner JSON-Datei an
+    fetch("fragen.json")
       .then((res) => res.json())
       .then((data) => {
-        questions = data.Kategorien[cat]; // Passe die Datenstruktur entsprechend deiner JSON-Datei an
+        questions = data.Kategorien[cat]; 
         setTimeout(() => {
           startScreen.classList.add("hide");
           quiz.classList.remove("hide");
           currentQuestion = 1;
           showQuestion(questions[0]);
-          startTimer(); // Starte den Timer nach dem Laden der Fragen
+          startTimer();
         }, 1000);
       });
   };
