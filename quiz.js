@@ -28,6 +28,7 @@ const startQuiz = () => {
     .then((res) => res.json())
     .then((data) => {
       questions = data.Kategorien[cat];
+      questions = questions.slice(0, num);
       setTimeout(() => {
         startScreen.classList.add("hide");
         quiz.classList.remove("hide");
