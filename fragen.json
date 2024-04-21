@@ -256,5 +256,67 @@
         "incorrect_answers": ["negativ geladene Teilchen", "neutral geladene Teilchen", "halb positiv und halb negativ geladene Teilchen"]
       }
     ]
+      "Symbolschreibweise": [
+        {
+          "question": "Wie lautet der Symbolname von Wasserstoff? ",
+          "correct_answer": "H",
+          "incorrect_answers": ["C", "N", "Hg"]
+        },
+        {
+          "question": "Wie lautet der Symbolname von "Sauerstoff"? ",
+          "correct_answer": "O",
+          "incorrect_answers": ["S", "H2O", "H"]
+        },
+        {
+          "question": "Wie lautet der Symbolname von Kohlenstoff? ",
+          "correct_answer": "C",
+          "incorrect_answers": ["K", "Cu", "Cl"]
+        },
+        {
+          "question": "Wie lautet der Symbolname von Stickstoff? ",
+          "correct_answer": "N",
+          "incorrect_answers": ["S", "Sf", "He"]
+        },
+        {
+          "question": "Wie lautet der Symbolname von Eisen? ",
+          "correct_answer": "Fe",
+          "incorrect_answers": ["E", "He", "N"]
+        },
+        {
+          "question": "Wie lautet der Symbolname von Kupfer? ",
+          "correct_answer": "Cu",
+          "incorrect_answers": ["K", "H", "Cl"]
+        },
+        {
+          "question": "Wie lautet der Symbolname von Silber? ",
+          "correct_answer": "Ag",
+          "incorrect_answers": ["Au", "A", "Fe"]
+        },
+        {
+          "question": "Wie lautet der Symbolname von Gold? ",
+          "correct_answer": "Au",
+          "incorrect_answers": ["A", "Ag", "Ne"]
+        },
+        {
+          "question": "Wie lautet der Symbolname von Quecksilber? ",
+          "correct_answer": "Hg",
+          "incorrect_answers": ["Q", "Ag", "Au"]
+        },
+        {
+          "question": "Wie lautet der Symbolname von Schwefel? ",
+          "correct_answer": "S",
+          "incorrect_answers": ["Se", "Fe", "Ne"]
+        },
+        {
+          "question": "Wie lautet der Symbolname von Chlor? ",
+          "correct_answer": "Cl",
+          "incorrect_answers": ["C", "A", "Hl"]
+        },
+        {
+          "question": "Wie lautet der Symbolname von Helium? ",
+          "correct_answer": "He",
+          "incorrect_answers": ["H", "Gl", "C"]
+        }
+      ],
   }
 }
