@@ -71,8 +71,9 @@ h5{
     margin-bottom: 25px;
 }
 .card .button{
+    position: center;
     background-color: #239cd8;
-    color: white;
+    color: rgb(255, 255, 255);
     text-decoration: none;
     border: 2px solid transparent;
     font-weight: bold;
