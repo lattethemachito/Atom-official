@@ -17,8 +17,28 @@
         "incorrect_answers": ["Nach dem Schmelzpunkt", "Nach der Größe", "Alphabetisch"]
       },
       {
+        "question": "Wer hat das Periodensystem erstellt und wann wurde es veröffentlicht?",
+        "correct_answer": "Dmitri Mendelejew im Jahr 1869 ",
+        "incorrect_answers": ["Albert Einstein im Jahr 1905", "Isaac Newton im Jahr 1869", "Marie Curie im Jahr 1687"]
+      },
+      {
+        "question": "Für was steht die Kernladung eines Atoms?",
+        "correct_answer": "Die Anzahl der Protonen im Kern",
+        "incorrect_answers": ["Die Anzahl der Elektronen im Kern", "Die Anzahl der Neutronen im Kern", "Die Anzahl der Nukleonen im Kern"]
+      },
+      {
+        "question": "Was gibt die Molare Masse in der Kachel an?",
+        "correct_answer": "Das Gewicht eines einzelnen Atoms des jeweiligen Elements",
+        "incorrect_answers": ["Die Geschwindigkeit der Elektronen um den Kern", "Das Gewicht eines Elektrons", "Die Anordnung der Elektronen im Atom"]
+      },
+      {
+        "question": "Wie entschied Jöns Jakob Berzelius über das Symbol eines Elements, wenn zwei Elemente denselben Anfangsbuchstaben besaßen?",
+        "correct_answer": "ergänzte den zweiten Buchstaben des griechischen/lateinischen Elementsnamens",
+        "incorrect_answers": ["wählte den dritten Buchstaben des Elementsnamens", "wählte den letzten Buchstaben des Elementsnamens", "kombinierte die Protonen der beiden Elemente"]
+      },
+      {
         "question": "Warum sind Elementsymbole wichtig in der Chemie?",
-        "correct_answer": "Um die chemische Sprache international verständlich zu machen",
+        "correct_answer": "internationale Verständigung der chemische Sprache",
         "incorrect_answers": ["Um die radioaktiven Eigenschaften zu beschreiben", "Um die Masse des Elements zu bestimmen", "Nur aus historischen Gründen"]
       },
       {
@@ -38,8 +58,8 @@
       },
       {
         "question": "Was stellte John Dalton in Bezug auf Atome fest?",
-        "correct_answer": "Alle Atome eines Elements haben das gleiche Volumen und die gleiche Masse.",
-        "incorrect_answers": ["Atome bestehen aus positiven und negativen Teilchen.", "Atome können durch chemische Reaktionen vernichtet werden.", "Atome haben verschiedene Größen und Massen."]
+        "correct_answer": "Alle Atome eines Elements haben das gleiche Volumen + Masse",
+        "incorrect_answers": ["Atome bestehen aus positiven und negativen Teilchen", "Atome können durch chemische Reaktionen vernichtet werden.", "Atome haben verschiedene Größen und Massen"]
       }
     ],
     "Periodensystem": [
@@ -49,8 +69,28 @@
         "incorrect_answers": ["Nach dem Schmelzpunkt", "Nach der Größe", "Alphabetisch"]
       },
       {
+        "question": "Wer hat das Periodensystem erstellt und wann wurde es veröffentlicht?",
+        "correct_answer": "Dmitri Mendelejew im Jahr 1869 ",
+        "incorrect_answers": ["Albert Einstein im Jahr 1905", "Isaac Newton im Jahr 1869", "Marie Curie im Jahr 1687"]
+      },
+      {
+        "question": "Für was steht die Kernladung eines Atoms?",
+        "correct_answer": "Die Anzahl der Protonen im Kern",
+        "incorrect_answers": ["Die Anzahl der Elektronen im Kern", "Die Anzahl der Neutronen im Kern", "Die Anzahl der Nukleonen im Kern"]
+      },
+      {
+        "question": "Was gibt die Molare Masse in der Kachel an?",
+        "correct_answer": "Das Gewicht eines einzelnen Atoms des jeweiligen Elements",
+        "incorrect_answers": ["Die Geschwindigkeit der Elektronen um den Kern", "Das Gewicht eines Elektrons", "Die Anordnung der Elektronen im Atom"]
+      },
+      {
+        "question": "Wie entschied Jöns Jakob Berzelius über das Symbol eines Elements, wenn zwei Elemente denselben Anfangsbuchstaben besaßen?",
+        "correct_answer": "ergänzte den zweiten Buchstaben des griechischen/lateinischen Elementsnamens",
+        "incorrect_answers": ["wählte den dritten Buchstaben des Elementsnamens", "wählte den letzten Buchstaben des Elementsnamens", "kombinierte die Protonen der beiden Elemente"]
+      },
+      {
         "question": "Warum sind Elementsymbole wichtig in der Chemie?",
-        "correct_answer": "Um die chemische Sprache international verständlich zu machen",
+        "correct_answer": "internationale Verständigung der chemische Sprache",
         "incorrect_answers": ["Um die radioaktiven Eigenschaften zu beschreiben", "Um die Masse des Elements zu bestimmen", "Nur aus historischen Gründen"]
       },
       {
@@ -70,15 +110,15 @@
       },
       {
         "question": "Was stellte John Dalton in Bezug auf Atome fest?",
-        "correct_answer": "Alle Atome eines Elements haben das gleiche Volumen und die gleiche Masse.",
-        "incorrect_answers": ["Atome bestehen aus positiven und negativen Teilchen.", "Atome können durch chemische Reaktionen vernichtet werden.", "Atome haben verschiedene Größen und Massen."]
+        "correct_answer": "Alle Atome eines Elements haben das gleiche Volumen + Masse",
+        "incorrect_answers": ["Atome bestehen aus positiven und negativen Teilchen", "Atome können durch chemische Reaktionen vernichtet werden", "Atome haben verschiedene Größen und Massen"]
       }
     ],
     "Atom": [
       {
         "question": "Welche Aussage über Atome ist richtig?",
-        "correct_answer": "Der Atomkern enthält Protonen und Neutronen ",
-        "incorrect_answers": ["Der Atomkern ist negativ geladen.", "Die Elektronen kreisen im Atomkern.", "Die Atomhülle besteht aus Protonen. "]
+        "correct_answer": "Der Atomkern enthält Protonen und Neutronen",
+        "incorrect_answers": ["Der Atomkern ist negativ geladen", "Die Elektronen kreisen im Atomkern", "Die Atomhülle besteht aus Protonen"]
       },
       {
         "question": "Wie werden Atome bezeichnet, die mehr Elektronen als Protonen besitzen? ",
@@ -93,7 +133,7 @@
       {
         "question": "Was passiert, wenn einem neutral geladenen Atom Elektronen hinzugefügt werden?",
         "correct_answer": "Es bildet sich ein Elektronenüberschuss",
-        "incorrect_answers": ["Das Atom wird positiv geladen.", "Der Atomkern wird kleiner.", "Es entsteht ein Elektronenmangel."]
+        "incorrect_answers": ["Das Atom wird positiv geladen", "Der Atomkern wird kleiner", "Es entsteht ein Elektronenmangel"]
       },
       {
         "question": "Welche Wechselwirkung treibt den Atomkern auseinander?",
@@ -112,8 +152,8 @@
       },
       {
         "question": "Was bedeutet es, wenn ein Atom neutral geladen ist?",
-        "correct_answer": "Es besitzt genauso viele Protonen wie Elektronen.",
-        "incorrect_answers": ["Es ist instabil.", "Es enthält nur Neutronen.", "Es hat eine doppelte Ladung."]
+        "correct_answer": "Es besitzt genauso viele Protonen wie Elektronen",
+        "incorrect_answers": ["Es ist instabil", "Es enthält nur Neutronen", "Es hat eine doppelte Ladung"]
       },
       {
         "question": "Wodurch werden in einem Atom die Elektronen auf ihrer Bahn gehalten?",
@@ -122,8 +162,8 @@
       },
       {
         "question": "Was geschieht, wenn einem neutral geladenen Atom Elektronen entnommen werden? ",
-        "correct_answer": "Es zieht positive Ladung an und stößt negative Ladung ab.",
-        "incorrect_answers": ["Es entsteht ein Elektronenüberschuss.", "Es bildet sich ein Elektronenmangel.", "Es wird instabil."]
+        "correct_answer": "Es zieht positive Ladung an und stößt negative Ladung ab",
+        "incorrect_answers": ["Es entsteht ein Elektronenüberschuss", "Es bildet sich ein Elektronenmangel", "Es wird instabil"]
       },
       {
         "question": "Aus was besteht der Atomkern?",
