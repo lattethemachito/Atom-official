@@ -123,6 +123,23 @@ form.sign-up-form{
     margin: 10px 0;
     font-size: 16px;
 }
+.button {
+    width: 44%;
+    border: none;
+    font-size: 13px;
+    border-radius: 50px;
+    background: #c749db;
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+    left: 350px;
+    bottom: 10px;
+    padding: 10px  10px;
+    position: absolute;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
 .panels-container {
     position: relative;
     top: 0;
