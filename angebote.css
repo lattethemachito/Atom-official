@@ -1,18 +1,23 @@
+/* Import der Schriftart "Poppins" von Google Fonts */
 @import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
 
-body
-{
+/* Globale Stile für das gesamte Dokument */
+body {
     padding: 0;
     margin: 0;
-    font-family: "Poppins", sans-serif;
+    font-family: "Poppins", sans-serif; /* Verwendung der Schriftart Poppins */
     box-sizing: border-box;
 }
+
+/* Stile für den Titelbereich */
 .title {
     padding: 0;
     margin: 0;
-    font-family: 'Anonymous pro', monospace;
-    box
+    font-family: 'Anonymous pro', monospace; /* Verwendung der Schriftart "Anonymous pro" */
+    box /* Unvollständiger Wert "box" */
 }
+
+/* Stile für die Navigationsleiste */
 .nav {
     display: flex;
     align-items: center;
@@ -21,12 +26,15 @@ body
     padding-left: 8%;
     padding-right: 8%;
 }
+
+/* Stile für den Dienstleistungsbereich */
 .service {
-    background: linear-gradient(to bottom right, #2d0b8a, #185bb9, #2d0b8a);
+    background: linear-gradient(to bottom right, #2d0b8a, #185bb9, #2d0b8a); /* Verlaufshintergrund */
     width: 100%;
     padding: 100px 0px;
 } 
 
+/* Stile für den Titel im Dienstleistungsbereich */
 .title h2 {
     color: rgb(255, 255, 255);
     font-size: 75px;
@@ -35,23 +43,28 @@ body
     text-align: center;
 }
 
+/* Stile für die Boxen im Dienstleistungsbereich */
 .box {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 400px;
 }
+
+/* Stile für die Karten im Dienstleistungsbereich */
 .card{
     height: 365px;
     width: 335px;
     padding: 20px 35px;
-    background: linear-gradient(to bottom right, #811681, #9922ab, #811681);
+    background: linear-gradient(to bottom right, #811681, #9922ab, #811681); /* Verlaufshintergrund */
     border-radius: 20px;
     margin: 15px;
     position: relative;
     overflow: hidden;
     text-align: center;
 }
+
+/* Stile für die Symbole in den Karten */
 .card i{
     font-size: 50px;
     display: block;
@@ -59,19 +72,25 @@ body
     margin: 25px 0px;
     color: #239cd8;
 }
+
+/* Stile für die Überschriften in den Karten */
 h5{
     color: white;
     font-size: 23px;
     margin-bottom: 15px;
 }
+
+/* Stile für den Textinhalt in den Karten */
 .pra p{
     color: white;
     font-size: 16px;
     line-height: 27px;
     margin-bottom: 25px;
 }
+
+/* Stile für die Schaltflächen in den Karten */
 .card .button{
-    position: center;
+    position: center; /* Positionierung */
     background-color: #239cd8;
     color: rgb(255, 255, 255);
     text-decoration: none;
@@ -79,10 +98,12 @@ h5{
     font-weight: bold;
     padding: 9px  22px;
     border-radius: 30px;
-    transition: .4s
+    transition: .4s; /* Übergangseffekt */
 }
+
+/* Hover-Stile für die Schaltflächen in den Karten */
 .card .button:hover{
-background-color: transparent;
-border: 2px solid #239cd8;
-cursor: pointer;
+    background-color: transparent;
+    border: 2px solid #239cd8;
+    cursor: pointer;
 }
