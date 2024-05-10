@@ -1,84 +1,92 @@
-body
-{
-    padding: 0;
-    margin: 0;
-    font-family: 'Anonymous pro', monospace;
-    box-sizing: border-box;
+/* CSS-Kommentare können verwendet werden, um den Code zu dokumentieren und zu erklären */
+
+/* Styling für den gesamten Körper (Body) der Webseite */
+body {
+    padding: 0; /* Kein Innenabstand */
+    margin: 0; /* Kein Außenabstand */
+    font-family: 'Anonymous pro', monospace; /* Verwendung der Schriftart 'Anonymous Pro' */
+    box-sizing: border-box; /* Berechnung des Gesamtbreite und -höhe einschließlich Padding und Border */
 }
+
+/* Styling für den heroischen Bereich */
 .hero {
-    height: 100vh;
-    width: 100%;
-    background-image: url(textlogo.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+    height: 100vh; /* Die Höhe entspricht der gesamten Bildschirmhöhe */
+    width: 100%; /* Die Breite erstreckt sich über den gesamten verfügbaren Bereich */
+    background-image: url(textlogo.png); /* Hintergrundbild */
+    background-size: cover; /* Das Hintergrundbild passt sich der Größe des Containers an */
+    background-repeat: no-repeat; /* Das Hintergrundbild wird nicht wiederholt */
+    background-position: center; /* Das Hintergrundbild wird zentriert positioniert */
 }
+
+/* Styling für das Hintergrundvideo */
 .back-video {
-   position: absolute;
-   right: 0;
-   bottom: 0;
-   z-index: -1;
+    position: absolute; /* Absolute Positionierung */
+    right: 0; /* Abstand vom rechten Rand */
+    bottom: 0; /* Abstand vom unteren Rand */
+    z-index: -1; /* Hintergrundebene, um es hinter anderen Elementen zu platzieren */
 }
+
+/* Medienabfrage für Bildschirme mit einem Seitenverhältnis von mindestens 16:9 */
 @media (min-aspect-ratio: 16/9) {
-    .back-video{
-        width: auto;
-        height: 100%;
+    .back-video {
+        width: auto; /* Automatische Breite */
+        height: 100%; /* Die Höhe entspricht der gesamten Bildschirmhöhe */
     }
 }
-@media (min-aspect-ratio: 16/9) {
-    .back-video{
-        width: auto;
-        height: 100%;
-    }
-}
+
+/* Navigationsbereich */
 nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-top: 45px;
-    padding-left: 8%;
-    padding-right: 8%;
+    display: flex; /* Flexbox-Layout */
+    align-items: center; /* Ausrichtung der Elemente vertikal zentriert */
+    justify-content: space-between; /* Gleicher Abstand zwischen den Elementen */
+    padding-top: 45px; /* Innenabstand oben */
+    padding-left: 8%; /* Innenabstand links */
+    padding-right: 8%; /* Innenabstand rechts */
 }
 
-.button{
-    background-color: #fff;
-    color: #2f123a;
-    
+/* Gemeinsames Styling für Navigationsbuttons */
+.button {
+    background-color: #fff; /* Hintergrundfarbe */
+    color: #2f123a; /* Textfarbe */
 }
 
-.button1{
-    font-size: 18px;
-    text-decoration: none;
-    border: 1px solid transparent;
-    font-weight: bold;
-    padding: 20px  20px;
-    border-radius: 35px;
-    transition: transform 0.4s;
-    position:absolute;
-    right: 70px;
-    top: 30px;
+/* Styling für den Anmeldebutton */
+.button1 {
+    font-size: 18px; /* Schriftgröße */
+    text-decoration: none; /* Keine Unterstreichung */
+    border: 1px solid transparent; /* Transparenter Rand */
+    font-weight: bold; /* Fetter Text */
+    padding: 20px 20px; /* Innenabstand oben und unten, links und rechts */
+    border-radius: 35px; /* Abgerundete Ecken */
+    transition: transform 0.4s; /* Animationsübergang */
+    position: absolute; /* Absolute Positionierung */
+    right: 70px; /* Abstand vom rechten Rand */
+    top: 30px; /* Abstand vom oberen Rand */
 }
 
-.button2{
-    font-size: 23px;
-    text-decoration: none;
-    border: 1px solid transparent;
-    font-weight: bold;
-    padding: 20px  20px;
-    border-radius: 35px;
-    transition: transform 0.4s;
-    position: absolute;
-    bottom:180px;
-    left: 180px;
-
+/* Styling für den Angebotebutton */
+.button2 {
+    font-size: 23px; /* Schriftgröße */
+    text-decoration: none; /* Keine Unterstreichung */
+    border: 1px solid transparent; /* Transparenter Rand */
+    font-weight: bold; /* Fetter Text */
+    padding: 20px 20px; /* Innenabstand oben und unten, links und rechts */
+    border-radius: 35px; /* Abgerundete Ecken */
+    transition: transform 0.4s; /* Animationsübergang */
+    position: absolute; /* Absolute Positionierung */
+    bottom: 180px; /* Abstand vom unteren Rand */
+    left: 180px; /* Abstand vom linken Rand */
 }
 
-.button:hover{
-   transform: scale(1.2);
+/* Styling für den Hover-Effekt der Buttons */
+.button:hover {
+    transform: scale(1.2); /* Vergrößern des Buttons beim Überfahren mit der Maus */
 }
-.content{
-    position: absolute;
-    top: 50%;
-    left:8%;
-    transform: translateY(-50%);
-} 
+
+/* Styling für den Inhaltsbereich */
+.content {
+    position: absolute; /* Absolute Positionierung */
+    top: 50%; /* Oben auf 50% der Seite ausrichten */
+    left: 8%; /* Links um 8% der Seite verschieben */
+    transform: translateY(-50%); /* Vertikal zentrieren */
+}
