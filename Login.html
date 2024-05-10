@@ -1,9 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html> <!-- Deklariert den Typ des Dokuments als HTML5 -->
+
+<html lang="en"> <!-- Beginn des HTML-Dokuments mit der Angabe der Sprache als Englisch -->
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8"> <!-- Zeichensatz des Dokuments -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Meta-Tag für den Internet Explorer -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ansichts-Viewport -->
+    
+    <!-- Verweis auf die Font Awesome CSS-Datei -->
     <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
@@ -12,31 +16,36 @@
     referrerpolicy="no-referrer"
   />
 
+    <!-- Verweis auf eine benutzerdefinierte CSS-Datei für das Anmeldeformular -->
     <link rel="stylesheet" href="Login.css">
-    <title>signin-signup</title>
+    <title>signin-signup</title> <!-- Titel der Webseite -->
 </head>
 
 <body>
 
-    <div class="container">
-        <div class="signin-signup">
+    <div class="container"> <!-- Container für das Anmeldeformular -->
+        <div class="signin-signup"> <!-- Container für die Anmelde- und Registrierungsformulare -->
+            <!-- Anmeldeformular -->
             <form action="" class="sign-in-form">
-                <h2 class="title">Anmelden</h2>
-                <div class="input-field">
-                    <i class="fas fa-user"></i>
-                    <input type="text" placeholder="Benutzername">
+                <h2 class="title">Anmelden</h2> <!-- Überschrift des Anmeldeformulars -->
+                <div class="input-field"> <!-- Eingabefeld für den Benutzernamen -->
+                    <i class="fas fa-user"></i> <!-- Icon für den Benutzernamen -->
+                    <input type="text" placeholder="Benutzername"> <!-- Eingabefeld für den Benutzernamen -->
                 </div>
-                <div class="input-field">
-                    <i class="fas fa-lock"></i>
-                    <input type="password" placeholder="Passwort">
+                <div class="input-field"> <!-- Eingabefeld für das Passwort -->
+                    <i class="fas fa-lock"></i> <!-- Icon für das Passwort -->
+                    <input type="password" placeholder="Passwort"> <!-- Eingabefeld für das Passwort -->
                 </div>
-                <input type="submit" value="Anmelden" class="btn">
+                <input type="submit" value="Anmelden" class="btn"> <!-- Anmelde-Button -->
                
+                <!-- Link zum Registrierungsformular -->
                 <p class="account-text">Don't have an account? <a href="#" id="sign-up-btn2">Registieren</a></p>
             </form>
 
+            <!-- Registrierungsformular -->
             <form action="" class="sign-up-form">
-                <h2 class="title">Registieren</h2>
+                <h2 class="title">Registieren</h2> <!-- Überschrift des Registrierungsformulars -->
+                <!-- Eingabefelder für Benutzername, E-Mail und Passwort -->
                 <div class="input-field">
                     <i class="fas fa-user"></i>
                     <input type="text" placeholder="Benutzername">
@@ -49,33 +58,38 @@
                     <i class="fas fa-lock"></i>
                     <input type="password" placeholder="Passwort">
                 </div>
-                <input type="submit" value="Registieren" class="btn">
+                <input type="submit" value="Registieren" class="btn"> <!-- Registrierungs-Button -->
              
+                <!-- Link zum Anmeldeformular -->
                 <p class="account-text">Hast du schon einen Account? <a href="#" id="sign-in-btn2">Anmelden</a></p>
             </form>
         </div>
-        <div class="panels-container">
+        <div class="panels-container"> <!-- Container für die Panels -->
+            <!-- Linkes Panel mit Inhalten für bereits registrierte Mitglieder -->
             <div class="panel left-panel">
                 <div class="content">
-                    <h3>Bereits ein Mitglied?</h3>
-                    <p>Wilkommen zurück!</p>
-                    <button class="btn" id="sign-in-btn">Anmelden</button>
+                    <h3>Bereits ein Mitglied?</h3> <!-- Überschrift für bereits registrierte Mitglieder -->
+                    <p>Wilkommen zurück!</p> <!-- Begrüßungstext für bereits registrierte Mitglieder -->
+                    <button class="btn" id="sign-in-btn">Anmelden</button> <!-- Anmelde-Button -->
                 </div>
-                <img src="signup.svg" alt="" class="image">
+                <img src="signup.svg" alt="" class="image"> <!-- Bild für das linke Panel -->
             </div>
+            <!-- Rechtes Panel mit Inhalten für neue Mitglieder -->
             <div class="panel right-panel">
                 <div class="content">
-                    <h3>Noch kein Mitglied?</h3>
-                    <p>Registiere dich, damit du einfach, schnell und effizent lernen kannst. Das Lernen war noch nie so einfach wie heute!</p>
-                    <button class="btn" id="sign-up-btn">Registieren</button>
+                    <h3>Noch kein Mitglied?</h3> <!-- Überschrift für neue Mitglieder -->
+                    <p>Registiere dich, damit du einfach, schnell und effizient lernen kannst. Das Lernen war noch nie so einfach wie heute!</p> <!-- Beschreibungstext für neue Mitglieder -->
+                    <button class="btn" id="sign-up-btn">Registieren</button> <!-- Registrierungs-Button -->
                 </div>
-                <img src="signin.svg" alt="" class="image">
+                <img src="signin.svg" alt="" class="image"> <!-- Bild für das rechte Panel -->
             </div>
          </div>
     </div>
+    <!-- Navigation für Projektzwecke -->
     <nav>
         <a class="button">keine Anmeldung erforderlich, dient als Veranschaulichung zum Projekt.</a>
-        </nav>
+    </nav>
+    <!-- Verweis auf eine benutzerdefinierte JavaScript-Datei -->
     <script src="Login.js"></script>
 </body>
 </html>
