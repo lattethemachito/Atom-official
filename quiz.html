@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
+  <!-- Metadaten -->
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Externes CSS-Stylesheet für Font Awesome -->
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
@@ -11,14 +13,21 @@
     crossorigin="anonymous"
     referrerpolicy="no-referrer"
   />
+  <!-- Lokales CSS-Stylesheet für das Quiz -->
   <link rel="stylesheet" href="quiz.css" />
+  <!-- Titel des Dokuments -->
   <title>Quiz</title>
 </head>
 <body>
+  <!-- Container für das Quiz -->
   <div class="container">
+    <!-- Startbildschirm des Quiz -->
     <div class="start-screen">
+      <!-- Überschrift des Quiz -->
       <h1 class="heading">Quiz</h1>
+      <!-- Einstellungen für das Quiz -->
       <div class="settings">
+        <!-- Dropdown-Menü für die Anzahl der Fragen -->
         <label for="num-questions">Anzahl der Fragen:</label>
         <select id="num-questions">
           <option value="3">3</option>
@@ -26,6 +35,7 @@
           <option value="8">8</option>
           <option value="10">10</option>
         </select>
+        <!-- Dropdown-Menü für die Kategorie -->
         <label for="category">Wähle eine Kategorie:</label>
         <select id="category">
           <option value="Alles">Alles</option>
@@ -33,6 +43,7 @@
           <option value="Periodensystem">Periodensystem</option>
           <option value="Symbolschreibweise">Symbolschreibweise</option>
         </select>
+        <!-- Dropdown-Menü für die Zeit -->
         <label for="time">Bestimmte die Zeit:</label>
         <select id="time">
           <option value="10">10 Sekunden</option>
@@ -42,47 +53,69 @@
           <option value="30">30 Sekunden</option>
         </select>
       </div>
+      <!-- Button zum Starten des Quiz -->
       <button class="btn start">Start Quiz</button>
     </div>
+    <!-- Quizbereich -->
     <div class="quiz hide">
+      <!-- Timer für das Quiz -->
       <div class="timer">
+        <!-- Fortschrittsanzeige des Timers -->
         <div class="progress">
           <div class="progress-bar"></div>
           <span class="progress-text"></span>
         </div>
       </div>
+      <!-- Bereich für die Frage -->
       <div class="question-wrapper">
+        <!-- Nummer der Frage -->
         <div class="number">
           Frage <span class="current">1</span>
           <span class="total">/10</span>
         </div>
+        <!-- Frage -->
         <div class="question">Das ist eine Frage? Das ist eine Frage?</div>
       </div>
+      <!-- Bereich für die Antworten -->
       <div class="answer-wrapper">
+        <!-- Antwortoption -->
         <div class="answer selected">
-      <span class="text">answer</span>
-      <span class="checkbox">
-        <i class="fas fa-ckeck"></i>
-      </span>
-    </div>
-  </div>
-  
+          <!-- Text der Antwort -->
+          <span class="text">answer</span>
+          <!-- Checkbox für die Antwort -->
+          <span class="checkbox">
+            <!-- Icon für die Checkbox -->
+            <i class="fas fa-ckeck"></i>
+          </span>
+        </div>
+      </div>
+      <!-- Button zum Einreichen der Antwort -->
       <button class="btn submit" disabled>Einreichen</button>
+      <!-- Button für die nächste Frage -->
       <button class="btn next">Nächste Frage</button>
     </div>
+    <!-- Bildschirm für das Ende des Quiz -->
     <div class="end-screen hide">
+      <!-- Überschrift für das Ende des Quiz -->
       <h1 class="heading">Quiz</h1>
+      <!-- Punktzahlanzeige -->
       <div class="score">
+        <!-- Text für die Punktzahl -->
         <span class="score-text">Deine Punktzahl:</span>
+        <!-- Anzeige der Punktzahl -->
         <div>
+          <!-- Aktuelle Punktzahl -->
           <span class="final-score">0</span>
+          <!-- Gesamtpunktzahl -->
           <span class="total-score">/10</span>
         </div>
       </div>
+      <!-- Button zum Neustarten des Quiz -->
       <button class="btn restart">Starte erneut</button>
     </div>
   </div>
 
+  <!-- JavaScript-Datei für das Quiz -->
   <script src="quiz.js"></script>
 </body>
 </html>
