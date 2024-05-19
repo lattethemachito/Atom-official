@@ -1,21 +1,25 @@
+/* Grundlegende Stile für die gesamte HTML-Seite und den Body */
 html, body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    background-color: #2f123a;
+    margin: 0; /* Entfernt den Standard-Rand */
+    padding: 0; /* Entfernt die Standard-Abstände */
+    height: 100%; /* Setzt die Höhe von html und body auf 100% des Viewports */
+    background-color: #2f123a; /* Hintergrundfarbe für die gesamte Seite, ein dunkles Lila */
 }
 
+/* Stile für das nav-Element */
 nav {
-    height: 100%;
+    height: 100%; /* Setzt die Höhe des nav-Elements auf 100% des übergeordneten Elements (body) */
 }
 
+/* Stile für das hero-Div */
 .hero {
-    display: grid;
-    overflow: hidden;
+    display: grid; /* Verwendet das CSS Grid-Layout für das hero-Div */
+    overflow: hidden; /* Verhindert das Überlaufen des Inhalts, falls er größer als der Container ist */
 }
 
+/* Stile für die Bilder innerhalb des hero-Divs */
 .hero img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    width: 100%; /* Setzt die Breite der Bilder auf 100% des übergeordneten Elements (hero-Div) */
+    height: 100%; /* Setzt die Höhe der Bilder auf 100% des übergeordneten Elements (hero-Div) */
+    object-fit: cover; /* Skaliert die Bilder so, dass sie das hero-Div vollständig abdecken, ohne das Seitenverhältnis zu ändern */
 }
