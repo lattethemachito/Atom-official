@@ -3,107 +3,107 @@
 
 /* Globale Stile für das gesamte Dokument */
 body {
-    padding: 0;
-    margin: 0;
+    padding: 0; /* Entfernt Standard-Innenabstand */
+    margin: 0; /* Entfernt Standard-Rand */
     font-family: "Poppins", sans-serif; /* Verwendung der Schriftart Poppins */
-    box-sizing: border-box;
+    box-sizing: border-box; /* Ändert das Box-Modell, sodass Padding und Border zur Gesamthöhe und -breite hinzugefügt werden */
 }
 
 /* Stile für den Titelbereich */
 .title {
-    padding: 0;
-    margin: 0;
+    padding: 0; /* Entfernt Innenabstand */
+    margin: 0; /* Entfernt Rand */
     font-family: 'Anonymous pro', monospace; /* Verwendung der Schriftart "Anonymous pro" */
-    box /* Unvollständiger Wert "box" */
+    box /* Unvollständiger Wert "box" - sollte korrigiert werden */
 }
 
 /* Stile für die Navigationsleiste */
 .nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-top: 45px;
-    padding-left: 8%;
-    padding-right: 8%;
+    display: flex; /* Verwendet flexibles Box-Layout */
+    align-items: center; /* Zentriert die Elemente vertikal */
+    justify-content: space-between; /* Verteilt die Elemente gleichmäßig mit Platz dazwischen */
+    padding-top: 45px; /* Abstand oben */
+    padding-left: 8%; /* Abstand links */
+    padding-right: 8%; /* Abstand rechts */
 }
 
 /* Stile für den Dienstleistungsbereich */
 .service {
-    background: linear-gradient(to bottom right, #2d0b8a, #185bb9, #2d0b8a); /* Verlaufshintergrund */
-    width: 100%;
-    padding: 100px 0px;
+    background: linear-gradient(to bottom right, #2d0b8a, #185bb9, #2d0b8a); /* Verlaufshintergrund von dunkelblau nach hellblau und zurück zu dunkelblau */
+    width: 100%; /* Breite auf 100% des übergeordneten Elements */
+    padding: 100px 0px; /* 100 Pixel Abstand oben und unten */
 } 
 
 /* Stile für den Titel im Dienstleistungsbereich */
 .title h2 {
-    color: rgb(255, 255, 255);
-    font-size: 75px;
-    width: 1130px;
-    margin: 30px auto;
-    text-align: center;
+    color: rgb(255, 255, 255); /* Weißer Text */
+    font-size: 75px; /* Schriftgröße */
+    width: 1130px; /* Breite des Elements */
+    margin: 30px auto; /* 30 Pixel Abstand oben und unten, zentriert durch Auto-Werte */
+    text-align: center; /* Text zentriert */
 }
 
 /* Stile für die Boxen im Dienstleistungsbereich */
 .box {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 400px;
+    display: flex; /* Flexbox-Layout */
+    justify-content: center; /* Zentriert die Boxen horizontal */
+    align-items: center; /* Zentriert die Boxen vertikal */
+    min-height: 400px; /* Mindesthöhe */
 }
 
 /* Stile für die Karten im Dienstleistungsbereich */
 .card{
-    height: 365px;
-    width: 335px;
-    padding: 20px 35px;
-    background: linear-gradient(to bottom right, #811681, #9922ab, #811681); /* Verlaufshintergrund */
-    border-radius: 20px;
-    margin: 15px;
-    position: relative;
-    overflow: hidden;
-    text-align: center;
+    height: 365px; /* Höhe */
+    width: 335px; /* Breite */
+    padding: 20px 35px; /* Innenabstand */
+    background: linear-gradient(to bottom right, #811681, #9922ab, #811681); /* Verlaufshintergrund von lila nach pink und zurück zu lila */
+    border-radius: 20px; /* Abgerundete Ecken */
+    margin: 15px; /* Außenabstand */
+    position: relative; /* Relative Positionierung */
+    overflow: hidden; /* Überlauf wird verborgen */
+    text-align: center; /* Text zentriert */
 }
 
 /* Stile für die Symbole in den Karten */
 .card i{
-    font-size: 50px;
-    display: block;
-    text-align: center;
-    margin: 25px 0px;
-    color: #239cd8;
+    font-size: 50px; /* Schriftgröße */
+    display: block; /* Block-Anzeige */
+    text-align: center; /* Text zentriert */
+    margin: 25px 0px; /* 25 Pixel Abstand oben und unten */
+    color: #239cd8; /* Farbe des Symbols */
 }
 
 /* Stile für die Überschriften in den Karten */
 h5{
-    color: white;
-    font-size: 23px;
-    margin-bottom: 15px;
+    color: white; /* Weißer Text */
+    font-size: 23px; /* Schriftgröße */
+    margin-bottom: 15px; /* Abstand unten */
 }
 
 /* Stile für den Textinhalt in den Karten */
 .pra p{
-    color: white;
-    font-size: 16px;
-    line-height: 27px;
-    margin-bottom: 25px;
+    color: white; /* Weißer Text */
+    font-size: 16px; /* Schriftgröße */
+    line-height: 27px; /* Zeilenhöhe */
+    margin-bottom: 25px; /* Abstand unten */
 }
 
 /* Stile für die Schaltflächen in den Karten */
 .card .button{
     position: center; /* Positionierung */
-    background-color: #239cd8;
-    color: rgb(255, 255, 255);
-    text-decoration: none;
-    border: 2px solid transparent;
-    font-weight: bold;
-    padding: 9px  22px;
-    border-radius: 30px;
-    transition: .4s; /* Übergangseffekt */
+    background-color: #239cd8; /* Hintergrundfarbe */
+    color: rgb(255, 255, 255); /* Weißer Text */
+    text-decoration: none; /* Entfernt Textdekoration (wie Unterstreichung) */
+    border: 2px solid transparent; /* Transparenter Rahmen */
+    font-weight: bold; /* Fettschrift */
+    padding: 9px  22px; /* Innenabstand */
+    border-radius: 30px; /* Abgerundete Ecken */
+    transition: .4s; /* Übergangseffekt bei Hover */
 }
 
 /* Hover-Stile für die Schaltflächen in den Karten */
 .card .button:hover{
-    background-color: transparent;
-    border: 2px solid #239cd8;
-    cursor: pointer;
+    background-color: transparent; /* Hintergrundfarbe wird transparent */
+    border: 2px solid #239cd8; /* Rahmenfarbe wird blau */
+    cursor: pointer; /* Mauszeiger ändert sich zu einer Hand */
 }
